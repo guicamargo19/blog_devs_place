@@ -1,5 +1,18 @@
 # Blog
 
+Blog totalmente desenvolvido em Django com Python. Permite a criação de usuários que são administradores
+apenas de seus próprios blogs, mantendo o sistema seguro.
+
+Cada usuário pode atualizar seus dados e criar apenas um setup para administrar um Blog. O projeto permite a
+criação de Tags, Categorias, Páginas e Posts diversos que estão totalmente interligados, tornando a configuração e 
+criação do Blog muito intuitiva e agradável.
+
+Cada post, possui diversos campos desejáveis para completa criação de conteúdo, permitindo filtrar e acessar informações
+de maneira fácil e rápida, alterar publicações, ativando e desativando-as e também atualizando seu conteúdo. Permite a inserção de imagens que são automaticamente redimensionadas ao salvar o Post, mantendo a performance do site.
+
+Blog possui visual moderno, com elementos HTML e estilização em CSS, de fácil navegação e alta responsividade, focando
+também na acessibilidade.
+
 Projeto desenvolvido no curso de Python completo na Udemy pelo professor Luiz Otávio.
 
 ## 🚀 Começando
