@@ -6,25 +6,48 @@ from django.db.models import Q
 from django.http import Http404
 from django.contrib.auth.models import User
 
+from django.views.generic import ListView
 
 PER_PAGE = 9
 
 
-def index(request):
-    posts = Post.objects.get_published()
+class PostListView(ListView):
+    template_name = 'blog/pages/index.html'
+    context_object_name = 'posts'
+    paginate_by = PER_PAGE
+    queryset = Post.objects.get_published()
 
-    paginator = Paginator(posts, PER_PAGE)
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
-    return render(
-        request,
-        'blog/pages/index.html',
-        {
-            'page_obj': page_obj,
-            'page_title': 'Home - ',
-        }
-    )
+        context.update(
+            {
+                'page_title': 'Home - ',
+            }
+        )
+        return context
+
+
+class CreatedByListView(PostListView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        author_pk = self.kwargs.get('author_pk')
+        user = User.objects.filter(pk=author_pk).first()
+
+        if user is None:
+            raise Http404()
+
+        user_full_name = user.username
+
+        if user.first_name:
+            user_full_name = f'{user.first_name} {user.last_name}'
+        page_title = user_full_name + ' posts - '
+
+        context.update({
+            'page_title': page_title
+        })
+
+        return context
 
 
 def page(request, slug):
