@@ -5,7 +5,7 @@
     --_clr-gray: var(--_clr-base-hue) 10%;
   
     --clr-whitest: var(--_clr-primary) 100%;
-    --clr-white: var(--_clr-primary) 99%;
+    --clr-white: var(--_clr-primary) 98%;
     --clr-black: var(--_clr-primary) 2%;
   
     --clr-primary-ltst: var(--_clr-primary) 80%;
@@ -25,10 +25,12 @@
     --clr-gray-dkst: var(--_clr-gray) 10%;
   
     /* Font-family */
-    --ff-regular: Georgia, 'Times New Roman', Times, serif;
-    --ff-headings: Georgia, 'Times New Roman', Times, serif;
-    --ff-mono: monospace;
+    --ff-regular: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Georgia, 'Times New Roman', Times, serif; */
+    --ff-headings: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --ff-mono: sans-serif;
   
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     /* Font-Sizes */
     /* https://royalfig.github.io/fluid-typography-calculator/ */
     --fs-smlst: clamp(1.2rem, 1.092307692307692rem + 0.256410256410256vw, 1.4rem);
@@ -430,6 +432,10 @@
     padding: var(--spacing-base);
   }
   
+  .card-text-wrapper p {
+    height: 40px;
+  }
+
   .card-cover-wrapper {
     aspect-ratio: 16 / 9;
   }
@@ -457,6 +463,7 @@
   .card-title {
     font-size: var(--fs-bg);
     margin-top: 0;
+    height: 60px;
     margin-bottom: var(--spacing-micro);
   }
   
