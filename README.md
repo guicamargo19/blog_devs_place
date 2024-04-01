@@ -2,6 +2,10 @@
 
 <img src="https://servidor-estatico-tan.vercel.app/blog.png">
 
+## Publicado
+
+[Blog Devs Place](https://blog.gtatelie.com.br)
+
 Blog totalmente desenvolvido em **Django** com **Python**. Permite a criação de usuários que são administradores
 apenas de seus próprios blogs, mantendo o sistema seguro.
 
