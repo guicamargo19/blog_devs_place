@@ -1,6 +1,8 @@
 # Blog
 
-<img src="https://servidor-estatico-tan.vercel.app/blog.png">
+## Apresentação do projeto
+
+
 
 ## Publicado
 
