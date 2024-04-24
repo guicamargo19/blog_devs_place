@@ -1,8 +1,8 @@
-# Blog
+# Blog Devs Place
 
 ## Apresentação do projeto
 
-
+https://github.com/guicamargo19/blog_devs_place/assets/133445061/3807a388-a09e-45cf-9c8f-095aef7816b8
 
 ## Publicado
 
